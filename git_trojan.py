@@ -53,9 +53,7 @@ def connect_to_github():
 def get_file_contents(filepath):
 	gh,repo,branch = connect_to_github()
 	tree = branch.commit.commit.tree.recurse()
-	print filepath
 	for filename in tree.tree:
-		print filename.path
 		if filepath in filename.path:
 			print "[*] Found file %s" % filepath
 			blob = repo.blob(filename._json_data['sha'])
