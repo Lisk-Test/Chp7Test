@@ -39,7 +39,7 @@ class GitImporter(object):
 def module_runner(module):
 	task_queue.put(1)
 	result = sys.modules[module].run()
-	task.queue.get()
+	task_queue.get()
 	# store the result in our repo
 	store_module_result(result)
 	return
