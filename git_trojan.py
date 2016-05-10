@@ -45,7 +45,7 @@ def module_runner(module):
 	return
 
 def connect_to_github():
-	gh = login(username="Lisk-Test",password="Chapter7Test12!@")
+	gh = login(username="Lisk-Test",password="")
 	repo = gh.repository("Lisk-Test","Chp7Test")
 	branch = repo.branch("master")
 	return gh,repo,branch
